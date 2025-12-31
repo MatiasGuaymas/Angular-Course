@@ -1,89 +1,57 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // String
-let lname: string;
-
+let lname;
 lname = "Guaymas";
-
 let newname = lname.toUpperCase();
-
 console.log(newname); // GUAYMAS
-
 // lname = 10; -> Error
-
 // Number
-let age: number;
-
+let age;
 age = 20;
 age = 20.5;
-
 let result = parseInt("20"); // Type inference
-
 // Boolean
-let isValid: boolean;
-
+let isValid;
 // console.log(isValid); -> Error TS pero JS imprime undefined
-
-let isNotValid: boolean = false;
-
+let isNotValid = false;
 console.log(isNotValid); // false
-
 // Arrays
-let empList: String[];
-
+let empList;
 empList = ["Matias", "Juan"];
-
 let emp = empList.find((emp) => emp == "Guaymas");
-
 console.log(emp); // undefined
-
-let numList: Array<number>; // Generics
-
+let numList; // Generics
 numList = [1, 2, 3, 4];
-
 let newNum = numList[4];
-
 let results = numList.filter((num) => num > 2);
-
 let num = numList.find((num) => num === 2);
-
 let sum = numList.reduce((acc, num) => acc + num);
-
 console.log(newNum); // undefined
-
 console.log(results); // [3, 4]
-
 console.log(num); // 2
-
 console.log(sum); // 10
-
 // Enum 
-const enum Color { // Const: Dev necesita solo una lista de colores, pero no debe ser conocido en producción
-    Red,
-    Green,
-    Blue
-}
-
-let c: Color = Color.Blue;
-
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 1] = "Green";
+    Color[Color["Blue"] = 2] = "Blue";
+})(Color || (Color = {}));
+let c = Color.Blue;
 // Tuples
-let swapNumbs: [number, number];
-
-function swapNumbers(num1: number, num2: number): [number, number] {
+let swapNumbs;
+function swapNumbers(num1, num2) {
     return [num2, num1];
 }
-
 swapNumbs = swapNumbers(10, 20);
-
 swapNumbs[0];
 // swapNumbs[2]; -> Error
-
 // any
-
-let department: any; // Evitar tipo de dato any
-
+let department; // Evitar tipo de dato any
 department = "IT";
 department = 5;
-department = Array<number>;
-
+department = (Array);
 let dep; // any
-
 // void
+//# sourceMappingURL=datatypes.js.map
