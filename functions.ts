@@ -33,3 +33,11 @@ let numbers = [5, 6, 7];
 
 console.log(add2(2, 3, ...numbers));
 
+// Generic function
+function getItems<Type>(items: Type[]): Type[] {
+    return new Array<Type>().concat(items);
+}
+
+let concatResult = getItems([1, 2, 3, 4, 5]);
+
+let concatString = getItems<String>(["a", "b", "c"]);

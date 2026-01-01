@@ -23,4 +23,10 @@ function add2(num1, num2, ...num3) {
 }
 let numbers = [5, 6, 7];
 console.log(add2(2, 3, ...numbers));
+// Generic function
+function getItems(items) {
+    return new Array().concat(items);
+}
+let concatResult = getItems([1, 2, 3, 4, 5]);
+let concatString = getItems(["a", "b", "c"]);
 //# sourceMappingURL=functions.js.map
